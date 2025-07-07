@@ -6,7 +6,8 @@ from datetime import datetime, timedelta
 import re
 
 # Load Gemini API key (use os.getenv for security in production)
-genai.configure(api_key="AIzaSyBWITc9Gpdwazjb5BgOg7G5_pOaALSa70E")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel("gemini-2.5-pro")  # or "gemini-pro" if that's working
 
 # Function to detect greetings
