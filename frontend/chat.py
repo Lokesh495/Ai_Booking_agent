@@ -51,7 +51,7 @@ chat: <your friendly response>
 # Function to call backend FastAPI safely
 def book_event(info):
     try:
-        res = requests.post("http://localhost:8000/book", json=info)
+        res = requests.post("https://ai-booking-agent-1.onrender.com/book", json=info)
         if res.ok:
             return True, res.json()
         else:
